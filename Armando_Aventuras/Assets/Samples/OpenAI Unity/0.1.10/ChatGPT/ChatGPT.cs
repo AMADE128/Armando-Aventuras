@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace OpenAI
 {
-    public class ChatGPT : MonoBehaviour
+   /* public class ChatGPT : MonoBehaviour
     {
         [SerializeField] private InputField inputField;
         [SerializeField] private Button button;
@@ -79,5 +79,5 @@ namespace OpenAI
             button.enabled = true;
             inputField.enabled = true;
         }
-    }
+    }*/
 }

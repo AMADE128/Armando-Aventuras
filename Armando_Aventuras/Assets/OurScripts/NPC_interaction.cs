@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueEditor;
 
 public class NPC_interaction : MonoBehaviour , IInteractable
 {
     [SerializeField] string text;
-
+    [SerializeField] private NPCConversation conversation;
     public string Text => text;
 
     public bool Interact(Interactor interactor)
@@ -18,15 +19,5 @@ public class NPC_interaction : MonoBehaviour , IInteractable
         Debug.Log("Esto indica que le he dado a la E");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

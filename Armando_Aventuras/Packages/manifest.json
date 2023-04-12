@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "com.openai.api.unity": "https://github.com/hexthedev/OpenAi-Api-Unity.git",
-    "com.srcnalt.openai-unity": "https://github.com/srcnalt/OpenAI-Unity.git",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "1.15.17",
     "com.unity.ide.rider": "3.0.18",

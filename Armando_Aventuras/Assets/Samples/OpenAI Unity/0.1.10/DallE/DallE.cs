@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace OpenAI
 {
-    public class DallE : MonoBehaviour
+    /*public class DallE : MonoBehaviour
     {
         [SerializeField] private InputField inputField;
         [SerializeField] private Button button;
@@ -57,5 +57,5 @@ namespace OpenAI
             inputField.enabled = true;
             loadingLabel.SetActive(false);
         }
-    }
+    }*/
 }
