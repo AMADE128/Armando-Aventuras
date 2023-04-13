@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - ConversationManager
+  - NPC
   layers:
   - Default
   - TransparentFX
