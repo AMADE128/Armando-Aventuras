@@ -13,6 +13,8 @@ public class Interactor : MonoBehaviour
 
     [SerializeField] private InteractionCanva canva;
 
+    public bool inDialogue = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class Interactor : MonoBehaviour
             {
                 index = i;
                 find = true;
+                find = coll[i].GetComponent<IInteractable>().CanInteract;
             }
         }
         if (find)
@@ -46,9 +49,9 @@ public class Interactor : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (!inDialogue && Input.GetKeyDown(KeyCode.E))
                 {
-                    interact.Reaction();
+                    inDialogue = interact.Reaction();
                 }
             }
         }
@@ -61,9 +64,18 @@ public class Interactor : MonoBehaviour
             }
         }
 
-
+        
     }
 
+    public bool InDialogue()
+    {
+        return inDialogue;
+    }
+
+    public void endDialogue()
+    {
+        inDialogue = false;
+    }
 
     private void OnDrawGizmos()
     {

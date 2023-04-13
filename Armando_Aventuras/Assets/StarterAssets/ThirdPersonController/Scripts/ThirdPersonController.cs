@@ -158,7 +158,10 @@ namespace StarterAssets
 
             JumpAndGravity();
             GroundedCheck();
-            Move();
+            if (!this.GetComponent<Interactor>().InDialogue())
+            {
+                Move();
+            }
         }
 
         private void LateUpdate()

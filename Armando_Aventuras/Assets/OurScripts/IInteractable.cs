@@ -4,9 +4,13 @@ using UnityEngine;
 
 public interface IInteractable
 {
-   public string Text { get; }
+    public string Text { get; }
+
+    public bool CanInteract { get; }
 
     public bool Interact(Interactor interactor);
 
-    public void Reaction();
+    //if return true, start dialogue
+    public bool Reaction();
+
 }

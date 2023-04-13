@@ -142,9 +142,11 @@ namespace DialogueEditor
         //--------------------------------------
         // Public functions
         //--------------------------------------
+        private bool end = false ;
 
         public void StartConversation(NPCConversation conversation)
         {
+            end = false;
             m_conversation = conversation.Deserialize();
             if (OnConversationStarted != null)
                 OnConversationStarted.Invoke();
@@ -156,10 +158,15 @@ namespace DialogueEditor
 
         public void EndConversation()
         {
+            end = true;
             SetState(eState.TransitioningDialogueOff);
 
             if (OnConversationEnded != null)
                 OnConversationEnded.Invoke();
+        }
+        public bool TheConversationEnd() 
+        {
+            return end;
         }
 
         public void SelectNextOption()
