@@ -81,4 +81,24 @@ public class KarmaSystem : MonoBehaviour
             }
         }
     }
+
+    public void AddKarma(GameObject NPC){
+
+        for(int i = 0; i < NPCList.Length; i++)
+        {
+            if(NPC == NPCList[i]){
+                KarmaValue[i]++;
+            }
+        }
+    }
+
+    public void RemoveKarma(GameObject NPC){
+
+         for(int i = 0; i < NPCList.Length; i++)
+        {
+            if(NPC == NPCList[i]){
+                KarmaValue[i]--;
+            }
+        }
+    }
 }
