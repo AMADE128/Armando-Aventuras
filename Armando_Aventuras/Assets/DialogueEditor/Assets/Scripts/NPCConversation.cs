@@ -318,9 +318,6 @@ namespace DialogueEditor
             return conversation;
         }
 
-
-
-
         //--------------------------------------
         // Construct User-Facing Conversation Object and Nodes
         //--------------------------------------
@@ -381,6 +378,7 @@ namespace DialogueEditor
             }
         }
 
+        // Se crean los cuadros de texto
         private SpeechNode CreateSpeechNode(EditableSpeechNode editableNode)
         {
             SpeechNode speech = new SpeechNode();
@@ -405,6 +403,7 @@ namespace DialogueEditor
             return speech;
         }
 
+        // Se crean los botones de las respuestas
         private OptionNode CreateOptionNode(EditableOptionNode editableNode)
         {
             OptionNode option = new OptionNode();
